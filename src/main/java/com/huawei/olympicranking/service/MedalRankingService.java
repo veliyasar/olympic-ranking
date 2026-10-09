@@ -1,11 +1,11 @@
-package com.huawei.olympic_ranking.service;
+package com.huawei.olympicranking.service;
 
-import com.huawei.olympic_ranking.data.CountryRankingDto;
-import com.huawei.olympic_ranking.entity.*;
-import com.huawei.olympic_ranking.repository.AthleteRepository;
-import com.huawei.olympic_ranking.repository.CountryRepository;
-import com.huawei.olympic_ranking.repository.MedalRecordRepository;
-import com.huawei.olympic_ranking.repository.SportRepository;
+import com.huawei.olympicranking.data.CountryRankingDto;
+import com.huawei.olympicranking.entity.*;
+import com.huawei.olympicranking.repository.AthleteRepository;
+import com.huawei.olympicranking.repository.CountryRepository;
+import com.huawei.olympicranking.repository.MedalRecordRepository;
+import com.huawei.olympicranking.repository.SportRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
@@ -60,8 +60,8 @@ public class MedalRankingService {
             }
         }
 
-        // Iterate over all countries, build DTOs and sort
-        // Country with no medal gets [0, 0, 0]
+        // iterate over all countries, build DTOs and sort
+        // country with no medal gets [0, 0, 0]
         List<CountryRankingDto> unranked = countryRepository.findAll().stream()
                 .map(country -> {
                     long[] c = counts.getOrDefault(country.getId(), new long[3]);

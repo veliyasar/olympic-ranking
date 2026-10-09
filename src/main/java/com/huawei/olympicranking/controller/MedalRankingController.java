@@ -1,11 +1,11 @@
-package com.huawei.olympic_ranking.controller;
+package com.huawei.olympicranking.controller;
 
-import com.huawei.olympic_ranking.data.CountryRankingDto;
-import com.huawei.olympic_ranking.entity.Athlete;
-import com.huawei.olympic_ranking.entity.Country;
-import com.huawei.olympic_ranking.entity.MedalRecord;
-import com.huawei.olympic_ranking.entity.Sport;
-import com.huawei.olympic_ranking.service.MedalRankingService;
+import com.huawei.olympicranking.data.CountryRankingDto;
+import com.huawei.olympicranking.entity.Athlete;
+import com.huawei.olympicranking.entity.Country;
+import com.huawei.olympicranking.entity.MedalRecord;
+import com.huawei.olympicranking.entity.Sport;
+import com.huawei.olympicranking.service.MedalRankingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ public class MedalRankingController {
 
     private final MedalRankingService medalRankingService;
 
-    public MedalRankingController(MedalRankingService medalRankingService) {;
+    public MedalRankingController(MedalRankingService medalRankingService) {
         this.medalRankingService = medalRankingService;
     }
 

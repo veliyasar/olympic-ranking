@@ -1,4 +1,4 @@
-package com.huawei.olympic_ranking;
+package com.huawei.olympicranking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

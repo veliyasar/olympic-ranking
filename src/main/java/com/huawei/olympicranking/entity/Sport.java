@@ -1,4 +1,4 @@
-package com.huawei.olympic_ranking.entity;
+package com.huawei.olympicranking.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

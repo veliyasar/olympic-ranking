@@ -1,6 +1,6 @@
-package com.huawei.olympic_ranking.repository;
+package com.huawei.olympicranking.repository;
 
-import com.huawei.olympic_ranking.entity.MedalRecord;
+import com.huawei.olympicranking.entity.MedalRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

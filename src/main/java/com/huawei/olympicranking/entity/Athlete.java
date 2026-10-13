@@ -2,12 +2,12 @@ package com.huawei.olympicranking.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "athlete")
 @Getter
-@Setter
+@NoArgsConstructor
 public class Athlete {
 
     @Id
@@ -15,10 +15,15 @@ public class Athlete {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "athlete_name")
-    private String athleteName;
+    @Column(nullable = false)
+    private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "country_id")
     private Country country;
+
+    public Athlete(String name, Country country) {
+        this.name = name;
+        this.country = country;
+    }
 }

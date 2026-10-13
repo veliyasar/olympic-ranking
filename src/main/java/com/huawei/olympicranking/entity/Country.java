@@ -2,23 +2,27 @@ package com.huawei.olympicranking.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "country")
 @Getter
-@Setter
+@NoArgsConstructor
 public class Country {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "country_code")
-    private String countryCode;
+    @Column(nullable = false, unique = true)
+    private String code;
 
-    @Column(name = "country_name")
-    private String countryName;
+    @Column(nullable = false)
+    private String name;
 
+    public Country(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
 }
